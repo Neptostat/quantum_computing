@@ -1,4 +1,5 @@
-from qiskit import QuantumCircuit, Aer, execute
+from qiskit import QuantumCircuit, execute
+from qiskit_aer import Aer
 
 def quantum_random_bit():
     qc = QuantumCircuit(1, 1)
@@ -15,3 +16,4 @@ def quantum_random_bit():
 random_number = ''.join([quantum_random_bit() for _ in range(16)])
 print("Quantum Random Number (binary):", random_number)
 print("As Integer:", int(random_number, 2))
+
